@@ -14,6 +14,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 80%;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 #timer {
@@ -40,13 +43,13 @@ button {
 }
 
 #startBtn {
-    background-color: purple;
+    background-color: #4CAF50;
     color: white;
     padding: 0.75rem 1.5rem;
 }
 
 #startBtn:hover {
-    background-color: rgb(126, 49, 126);
+    background-color: #45a049;
 }
 
 #resetBtn {
@@ -61,21 +64,68 @@ button {
 
 .mode-buttons {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     margin-bottom: 1rem;
     justify-content: center;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mode-buttons button {
     background-color: #ddd;
     color: #333;
+    flex: 1;
+    min-width: 120px;
+    white-space: nowrap;
 }
 
-.mode-buttons button.active {
+#pomodoro {
     background-color: #2196F3;
     color: white;
 }
 
-.mode-buttons button:hover {
+#pomodoro:hover {
+    background-color: #1976D2;
+}
+
+#shortBreak {
+    background-color: #ddd;
+    color: #333;
+}
+
+#shortBreak.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+#shortBreak:hover {
     background-color: #bbb;
+}
+
+#shortBreak.active:hover {
+    background-color: #1976D2;
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+    .container {
+        width: 75%;
+        padding: 1.5rem;
+    }
+
+    #timer {
+        font-size: 3.5rem;
+    }
+
+    .mode-buttons {
+        gap: 0.5rem;
+        max-width: 100%;
+    }
+
+    .mode-buttons button {
+        min-width: 0;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
 } 
